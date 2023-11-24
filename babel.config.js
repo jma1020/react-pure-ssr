@@ -6,7 +6,7 @@ function isWebpack(caller) {
   return Boolean(caller && caller.name === 'babel-loader');
 }
 
-module.exports = api => {
+module.exports = (api) => {
   const web = api.caller(isWebTarget);
   const webpack = api.caller(isWebpack);
 
